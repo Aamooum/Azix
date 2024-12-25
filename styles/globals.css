@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+  cursor: pointer;
+ 
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.card:hover{
+  background-color: #000000;
+  color: white;
+ 
+}
+.card-border{
+  border: solid rgb(0, 0, 0) 1px;
+}
+
+.desc {
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: solid black 2px;
+ 
+  text-align: center;
+  font-weight:700;
+  font-size:100%;
+}
+.img-card{
+ height: 88%;
+}
+@media screen and (max-width: 1400px){
+  .desc{
+    height: 15%;
+    font-size:90%;
+  }
+  .img-card{
+    height: 85%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .desc{
+    height: 15%;
+    font-size:90%;
+  }
+  .img-card{
+    height: 85%;
+  }
+}
+@media screen and (max-width: 992px){
+  .desc{
+    height: 20%;
+   
+   
+    font-size:90%;
+  }
+  .img-card{
+    height: 80%;
+  }
+}
+@media screen and (max-width: 480px){
+  .desc{
+    height: 5rem;
+   
+   
+    font-size:90%;
+  }
+  .img-card{
+    height: 25rem;
+  }
+}
+
+
+.dropdown {
+
+  position: relative; /* Ensures the dropdown-content is positioned relative to this container */
+ 
+}
+
+.dropdown-header {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem ;
+  background-color: white;
+
+/*border-right: solid 2px;*/
+
+}
+.dropdown-header:hover {
+  background-color: #000000;
+  color: white;
+  height: 100%;
+
+}
+
+.dropdown-header.open {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-content {
+  position: absolute; /* Positions the dropdown content absolutely */
+  top: 100%; /* Positions it directly below the dropdown-header */
+  left: 0;
+  z-index: 1000; /* Ensures it overlays other content */
+  padding: 0.5rem;
+  border: 1px solid #000000;
+  
+  background-color: #ffffff;
+  margin-top: 0.15rem;
+  width: 100%; /* Makes sure the dropdown content matches the width of the header */
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 834px) {
+.nav-my-profile div{
+  width: 99vw;
+ 
+}
+}
+
+
+
