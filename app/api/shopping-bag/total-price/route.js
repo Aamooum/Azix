@@ -3,7 +3,6 @@ import { NextResponse } from 'next/server';
 import { AuthCart } from "@models/authCartModel";
 import { dbConnect } from "@utils/mongo";
 
-
 export const GET = async (req) => {
     try {
         const { role, token } = await authorize(req);

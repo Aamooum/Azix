@@ -18,10 +18,11 @@ export const GET = async (req) => {
 
         await dbConnect();
 
-        const cookieStore = cookies();
+        const cookieHeader = req.headers.get('cookie');
+        const cookieStore = cookies(cookieHeader);
         let sessionId = cookieStore.get('sessionId');
 
-        if (sessionId === undefined) {
+        if (!sessionId) {
             sessionId = uuidv4();
             await Session.create({ sessionId });
 
